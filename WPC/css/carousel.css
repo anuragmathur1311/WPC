@@ -37,8 +37,9 @@ body {
 
 /* Carousel base class */
 .carousel {
-  height: 100%;
-  margin-bottom: 5px;
+  width:100%;
+  height: 860px;
+  margin-bottom: 30px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -63,36 +64,20 @@ font-color:white;
 }
 
 /* Declare heights because of positioning of img element */
-@media (min-width: 992px) {
+@media only screen and (min-width: 768px) {
 .carousel .item {
-  height: 820px;
-  background-color: #777;
+  height: 860px;
+  background-color: #000;
 }
 }
+
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
+  width: 100%;
 }
-@media (max-width: 992px) {
-.carousel .item {
-  height: 650px;
-  background-color: #777;
-}
-}
-@media (max-width: 768px) {
-  .carousel .item {
-    height: 400px;
-    background-color: #777;
-  }
-}
-@media (max-width: 400px) {
-  .carousel .item {
-    height: 200px;
-    background-color: #777;
-  }
-}
+
 
 
 /* MARKETING CONTENT
@@ -253,9 +238,54 @@ fieldset#form_body {
     height: 100%;
     height: auto !important;
     min-height:100%;
-    background:url('images/img_8.jpg') #A98436 no-repeat;
+    background:url('../img/img_8.jpg') #A98436 no-repeat;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: 100% 100%;
+}
+
+#explore_button {
+  margin-bottom: 600px;
+  margin-right: -900px;
+  padding-top: 0px;
+  position:absolute;
+  display:none;
+  height:100px;
+  width:100px;
+  background-color:#eee;
+  border:1px solid black;
+  border-radius:15px;
+  text-align:center;
+}
+
+[draggable=true] {
+    cursor: move;
+}
+
+.btn-circle {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  line-height: 80px; /* adjust line height to align vertically*/
+  padding:0;
+  border-radius: 100%;
+}
+
+#dragme{
+  position:absolute;
+  display:none;
+  height:0px; 
+  width:0px;
+  background-color:#eee;
+  border:1px solid black;
+  border-radius:15px;
+  text-align:center;
+}
+
+.form-upload {
+  max-width: 400px;
+  padding: 50px;
+  margin: auto auto;
+  margin-bottom: 20px;
 }

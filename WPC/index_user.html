@@ -1,33 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-            <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-            <title>World Photographer's Club</title>
-            <link rel="icon" href="images/WPC_app_icon.png">
-                                    
-            <!-- Bootstrap core CSS -->
-            <link href="css/bootstrap.min.css" rel="stylesheet">
-                                        
-            <!-- Custom styles for this template -->
-            <link href="css/carousel.css" rel="stylesheet">
-            <script type ="text/javascript" src="js/login.js"> </script>
-            <script type="text/Javascript">
-                $(function(){
-                    $('form-fields').submit(function(){
-                    $(this).css("visibility", hidden);
-                    });
-                });
-            </script>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+                            
+    <title>World Photographer's Club</title>
+    <link rel="icon" href="images/WPC_app_icon.png">
+                                
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/cover.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+    <script type ="text/javascript" src="js/login.js"> </script>
+    <script type ="text/javascript" src="js/explore.js"> </script>
+    
+    <script>
+        
+        var mousex;
+        var mousey;
+        var move = false;
+        var ldivx = 200;
+        var ldivy = 200;
+        
+        window.onload = init;
+        
+        function init() {
+            var d = document.getElementById('dragme');
+            d.onmousedown = mousedown;
+            d.onmouseup = mouseup;
+            d.onmousemove = mousemove;
+            d.style.left = ldivx +'px';
+            d.style.top = ldivy +'px';
+            d.style.display = 'block';
+        }
+    
+    function mousedown(e) {
+        document.getElementById('dragme').style.color = 'red';
+        move = true;
+        mousex = e.clientX;
+        mousey = e.clientY;
+    }
+    
+    function mouseup(e) {
+        document.getElementById('dragme').style.color = 'black';
+        move = true;
+    }
+    
+    function mousemove(e) {
+        if(move){
+            ldivx = ldivx + e.clientX - mousex;
+            ldivy = ldivy + e.clientY - mousey;
+            mousex = e.clientX;
+            mousey = e.clientY;
+            var d = document.getElementById('dragme');
+            d.style.left = ldivx +'px';
+            d.style.top = ldivy +'px';
+        }
+    }
+    
+</script>
+</head>
     <!-- NAVBAR
      ================================================== -->
     <body>
-        <nav class="navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar-default navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -37,16 +77,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index_user.html">WPC</a>
+                    <a class="navbar-brand" href="index.html">WPC</a>
                 </div>
                 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index_user.html">Home</a></li>
-                        <li><a href="my_studio.html">My Studio</a></li>
-                        <li><a href="#">My Blog</a></li>
-                        <li><a href="#">Forum</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="forum.html">Forum</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">EXPLORE <b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -66,26 +104,25 @@
                                 <li><a href="#">Contact</a></li>
                                 <li><a href="#">License and FAQ</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Careers at WPC</a></li>
+                                <li class="disabled"><a href="#">Careers at WPC</a></li>
                             </ul>
                         </li>
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Find Photos, Communities & Photographers" size="42">
                                 </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-info">Find</button>
                     </form>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="my_studio.html">Anurag</a></li>
-                        <li><a href="#">Inbox <span class="badge">42</span></a></li>
+                            <li><a href="">Log Out</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-        
-        <!-- Carousel
-         ================================================== -->
+
+            
+<!-- Carousel================================================== -->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -100,60 +137,68 @@
                         <div class="container">
                             <div class="carousel-caption">
                                 <p>Photographers Name</p>
-                                <p><a class="btn btn-sm btn-default" href="signup.html" role="button">View Portfolio</a></p>
+                                <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-picture"></span> View Portfolio</button>
+                                <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Add to Ideabook</button>
+                                <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-pushpin"></span> Pin Photographer</button>
                             </div>
                         </div>
                         </div>
                 <div class="item">
                     <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide">
-                        <img src="img/faith disrupted.jpg" alt="Second slide"/>
+                        <img src="img/DSC_1582.jpg" alt="Second slide"/>
                         <div class="container">
                             <div class="carousel-caption">
                                 <p>Photographers Name</p>
-                                <p><a class="btn btn-sm btn-default" href="signup.html" role="button">View Portfolio</a></p>
+                                <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-picture"></span> View Portfolio</button>
+                                <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Add to Ideabook</button>
+                                <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-pushpin"></span> Pin Photographer</button>
                             </div>
                         </div>
                         </div>
                 <div class="item">
                     <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide">
-                        <img src="img/NYC-Shadow of the Empire3.jpg" alt= "Third slide"/>
+                        <img src="img/DSC_1737.jpg" alt= "Third slide"/>
                         <div class="container">
                             <div class="carousel-caption">
                                 <p>Photographers Name</p>
-                                <p><a class="btn btn-sm btn-default" href="signup.html" role="button">View Portfolio</a></p>
+                                <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-picture"></span> View Portfolio</button>
+                                <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Add to Ideabook</button>
+                                <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-pushpin"></span> Pin Photographer</button>
                             </div>
                         </div>
                         </div>
             </div>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-        </div><!-- /.carousel -->
+        </div>
+        <!-- /.carousel -->
+        
+        <div id="dragme">
+            <button type="button" class="btn btn-info btn-circle btn-sm"><span class="glyphicon glyphicon-globe"></span> EXPLORE</button>
+        </div>
         
         <!-- Marketing messaging and featurettes
          ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
-        
+        <br><br>
         <div class="container marketing">
             
             <!-- Three columns of text below the carousel -->
             <div class="row">
                 <div class="col-lg-4">
-                    <br><br>
-                    <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
+                    <img class="img-circle" src="js/holder.js/140x140" alt="Generic placeholder image">
                         <h2>Heading</h2>
                         <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
                         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
                         </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <br><br>
-                    <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
+                    <img class="img-circle" data-src="js/holder.js/140x140" alt="Generic placeholder image">
                         <h2>Heading</h2>
                         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
                         </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <br><br>
-                    <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
+                    <img class="img-circle" data-src="js/holder.js/140x140" alt="Generic placeholder image">
                         <h2>Heading</h2>
                         <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
@@ -207,7 +252,7 @@
             <!-- FOOTER -->
             <footer>
                 <p class="pull-right"><a href="#">Back to top</a></p>
-                <p>&copy; 2014 World Photographer's Club &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                <p>&copy; 2014 World Photographer's Club &middot; <a href="#">Privacy</a> &middot; <a href="#"> Terms</a>&middot; <a href="#"> Like us on Facebook</a>&middot; <a href="#"> Follow us on Twitter</a></p>
             </footer>
             
         </div><!-- /.container -->
@@ -216,7 +261,7 @@
         <!-- Bootstrap core JavaScript
          ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="js/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/docs.min.js"></script>
     </body>
