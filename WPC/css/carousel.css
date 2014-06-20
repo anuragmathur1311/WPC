@@ -55,7 +55,7 @@ body {
 }
 
 .signup_buttons {
-  margin-bottom: 300px;
+  margin-bottom: 250px;
   padding-top: 0px;
 }
 
@@ -170,8 +170,8 @@ font-color:white;
 
 .form-signin {
   max-width: 300px;
-  padding: 0px;
-  margin: auto auto;
+  padding: 0px 0px;
+  margin:1px 10px;
   margin-bottom: 20px;
 }
 .form-signin .form-signin-heading,
@@ -202,6 +202,10 @@ font-color:white;
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.form_signin_container{
+    min-width:300px;
 }
 
 .dropdown_container {
@@ -288,4 +292,22 @@ fieldset#form_body {
   padding: 50px;
   margin: auto auto;
   margin-bottom: 20px;
+}
+
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus {
+    color: blue;
+    background-color: transparent;
+}
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus {
+  color: blue;
+  background-color: #transparent;
+}
+.navbar .navbar-nav > .disabled > a,
+.navbar .navbar-nav > .disabled > a:hover,
+.navbar .navbar-nav > .disabled > a:focus {
+  color: #444;
+  background-color: transparent;
 }
