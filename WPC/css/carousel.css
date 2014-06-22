@@ -59,6 +59,10 @@ body {
   padding-top: 0px;
 }
 
+.carousel-signup {
+  position: fixed;
+  }
+  
 .signup_buttons a {
 font-color:white;
 }
