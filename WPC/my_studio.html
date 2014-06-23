@@ -14,28 +14,8 @@
 
     <!-- Add custom CSS here -->
     <link href="css/my_studio.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-        .badge {
-            display: inline-block;
-            min-width: 10px;
-            padding: 3px 7px;
-            font-size: 12px;
-            font-weight: bold;
-            line-height: 1;
-            color: #fff;
-            text-align: center;
-            white-space: nowrap;
-            vertical-align: baseline;
-            background-color: #5cb85c;
-            border-radius: 10px;
-        }
-    
-        h3 {
-            color: white;
-            font-size: 30px;
-        }
-    </style>
+    <link href="css/font.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -84,18 +64,19 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-plus"></span><b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="upload/upload.html"><span class="glyphicon glyphicon-camera"></span> Photos and Videos</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-pencil"></span> Blog Post</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-bell"></span> A Question</a></li>
-                            </ul>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="upload/upload.html"><span class="glyphicon glyphicon-camera"></span> Photos and Videos</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-pencil"></span> Blog Post</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-bell"></span> A Question</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><b class="caret"></b></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
                             <li><a href="#"><span class="glyphicon glyphicon-th-large"></span> Dashboard</a></li>
-                             <li><a href="#my_portfolios"><span class="glyphicon glyphicon-heart-empty"></span> My Portfolios</a></li>
+                            <li><a href="#my_portfolios"><span class="glyphicon glyphicon-heart-empty"></span> My Ideabook</a></li>
+                            <li><a href="#my_portfolios"><span class="glyphicon glyphicon-picture"></span> My Portfolios</a></li>
                             <li class="divider"></li>
                             <li><a href="#"><span class="glyphicon glyphicon-send"></span> Sign Out</a></li>
                         </ul>
@@ -236,7 +217,7 @@
                 <div class="row"><img src="img/Artist_1.jpg" alt="" class="img-responsive"></div>
                 <div class="row"><img src="img/Artists_2.jpg" alt="" class="img-responsive"></div>
             </div>
-            <!--
+            
             <div class="col-md-3">
                 <div class="row"><img src="img/asli_India_4_WMedited.jpg" alt="" class="img-responsive"></div>
                 <div class="row"><img src="img/faith_disrupted.jpg" alt="" class="img-responsive"></div>
@@ -255,11 +236,11 @@
                 <div class="row"><img src="img/Reflections.jpg" alt="" class="img-responsive"></div>
                 <div class="row"><img src="img/Shadow_of_the_Empire3.jpg" alt="" class="img-responsive"></div>
             </div>
-            -->
         </div>
+        <button type="button" class="btn btn-info btn-sm col-xs-offset-6"> Load More</button>
     </div>
     <!-- /Portfolio -->
-
+    <br>
     <!-- Call to Action -->
     <div id= "my_portfolios" class="call-to-action">
         <div class="container">

@@ -18,6 +18,22 @@
     <link href="css/search_result.css" rel="stylesheet">
     <link href="css/my_studio.css" rel="stylesheet">
     <link href="css/font.min.css" rel="stylesheet">
+    <style>
+        .badge {
+            display: inline-block;
+            min-width: 10px;
+            padding: 3px 7px;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 1;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            background-color: #5cb85c;
+            border-radius: 10px;
+        }
+    </style>
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -32,69 +48,68 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="index.html" style="font-family:verdana;color:#ab1234;font-size:30px;"><em>wpc</em></a>
+                  <a class="navbar-brand" href="index_user.html">WPC</a>
               </div>
               
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
+                      <li><a href="#top">My Studio</a></li>
+                      <li><a href="#my_photos">My Photos</a></li>
                       <li><a href="blog.html">Blog</a></li>
                       <li><a href="forum.html">Forum</a></li>
                       <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#ab1234;font-size:18px;">EXPLORE <b class="caret"></b></a>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">EXPLORE <b class="caret"></b></a>
                           <ul class="dropdown-menu">
                               <li><a href="#">WPC</a></li>
                               <li><a href="#">Communities</a></li>
                               <li><a href="#">People</a></li>
                               <li class="divider"></li>
                               <li><a href="#">Photos on a Map</a></li>
-                          </ul>
-                      </li>
-                      <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-                          <ul class="dropdown-menu">
-                              <li><a href="#">About Us</a></li>
-                              <li><a href="#">Contact</a></li>
-                              <li><a href="#">License and FAQ</a></li>
                               <li class="divider"></li>
-                              <li class="disabled"><a href="#">Careers at WPC</a></li>
+                              <li><a href="#">Search For Photographers</a></li>
                           </ul>
                       </li>
-                      <li><a href="https://www.facebook.com/pages/Anurag-Mathurs-Photography/215979155096125?ref=hl&ref_type=bookmark"><i class="fa fa-facebook fa-2x"></i></a></li>
-                      <li><a href="www.twitter.com"><i class="fa fa-twitter fa-2x"></i></a></li>
-                      <li><a href="www.dribble.com"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
-                      <li><a href="www.dribble.com"><i class="fa fa-pinterest fa-2x"></i></a></li>
                   </ul>
                   <form class="navbar-form navbar-left" role="search" action="search_result.html">
                       <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Find Photos, Communities & Photographers" size="42">
+                          <input type="text" class="form-control" placeholder="Search">
                               </div>
                       <button type="submit" class="btn btn-info">Search</button>
                   </form>
                   <ul class="nav navbar-nav navbar-right">
-                      <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
-                          <ul class="dropdown-menu">
-                              <li>
-                                  <div class="form_signin_container">
-                                      <form class="form-signin" role="form"  onsubmit="return validateForm() || validateLogin()" action="index_user.html" method="post" name="login_form">
-                                          <h2 class="form-signin-heading">Please sign in</h2>
-                                          <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
-                                              <input type="password" name="pass" class="form-control" placeholder="Password" required>
-                                                  <label><input type="checkbox" value="remember-me"> Remember Me</label>
-                                                  <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
-                                                  </form>
-                                  </div>
-                              </li>
+                      <li>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-plus"></span><b class="caret"></b></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="upload/upload.html"><span class="glyphicon glyphicon-camera"></span> Photos and Videos</a></li>
+                              <li><a href="#"><span class="glyphicon glyphicon-pencil"></span> Blog Post</a></li>
+                              <li><a href="#"><span class="glyphicon glyphicon-bell"></span> A Question</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><b class="caret"></b></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+                              <li><a href="#"><span class="glyphicon glyphicon-th-large"></span> Dashboard</a></li>
+                              <li><a href="#my_portfolios"><span class="glyphicon glyphicon-heart-empty"></span> My Ideabook</a></li>
+                              <li><a href="#my_portfolios"><span class="glyphicon glyphicon-picture"></span> My Portfolios</a></li>
                               <li class="divider"></li>
-                              <li><a href="#">Forgot Password</a></li>
+                              <li><a href="#"><span class="glyphicon glyphicon-send"></span> Sign Out</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope"></span><b class="caret"></b><span class="badge pull-right">42</span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Messages<span class="badge">20</span></a></li>
+                              <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> Notifications<span class="badge">10</span></a></li>
+                              <li class="divider"></li>
+                              <li><a href="#"><span class="glyphicon glyphicon-ok"></span> My Answers<span class="badge">12</span></a></li>
                           </ul>
                       </li>
                   </ul>
               </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
       </nav>
-
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -146,22 +161,22 @@
     </div>
 
 
-<!-- Marketing messaging and featurettes
- ================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-<div class="container marketing">
-    <h3>Results</h3>
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
+    <div class="container marketing">
+      <h3>Results</h3>
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
         <div class="col-lg-2 col-md-4 col-xs-6">
-            <a  href="#photos" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Photos" alt="Generic placeholder image"></a>
+          <a  href="#photos" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Photos" alt="Generic placeholder image"></a>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-2 col-md-4 col-xs-6">
-            <a  href="#photographers" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Photographers" alt="Generic placeholder image"></a>
+          <a  href="#photographers" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Photographers" alt="Generic placeholder image"></a>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-2 col-md-4 col-xs-6">
-            <a  href="#blog" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Blog" alt="Generic placeholder image"></a>
+          <a  href="#blog" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Blog" alt="Generic placeholder image"></a>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-2 col-md-4 col-xs-6">
             <a  href="#forum" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Forum" alt="Generic placeholder image"></a>
@@ -172,44 +187,44 @@
         <div class="col-lg-2 col-md-4 col-xs-6">
             <a  href="#trends" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Create Trends" alt="Generic placeholder image"></a>
         </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-    
-    <hr class="featurette-divider">
-    
-    <div id="photos" class="portfolio main">
-        <div class="container grid-custom">
-            <h3>Photos</h3>
-            <div class="container-fluid grid-custom">
-                <div class="col-md-3 col-sm-4 col-xs-6">
-                    <div class="row"><img src="img/AnuragMathur-1.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/AnuragMathur-2.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/Artist_1.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/Artists_2.jpg" alt="" class="img-responsive"></div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6">
-                    <div class="row"><img src="img/asli_India_4_WMedited.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/faith_disrupted.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/asli_India_WM.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/Beach_Diaries.jpg" alt="" class="img-responsive"></div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6">
-                    <div class="row"><img src="img/Brooklyn_Bridge.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/DSC_1556.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/DSC_1582.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/DSC_1596.jpg" alt="" class="img-responsive"></div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6">
-                    <div class="row"><img src="img/DSC_1737.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/Overload.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/Reflections.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/Shadow_of_the_Empire3.jpg" alt="" class="img-responsive"></div>
-                    <div class="row"><img src="img/Beach_Diaries.jpg" alt="" class="img-responsive"></div>
-                </div>
-            </div>
-        </div>
-            <button type="button" class="btn btn-info btn-sm col-xs-offset-6"> Load More</button>
-    </div>
-    
+      </div><!-- /.row -->
+      
+      <hr class="featurette-divider">
+      
+      <div id="photos" class="portfolio main">
+          <div class="container grid-custom">
+              <h3>Photos</h3>
+              <div class="container-fluid grid-custom">
+                  <div class="col-md-3 col-sm-4 col-xs-6">
+                      <div class="row"><img src="img/AnuragMathur-1.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/AnuragMathur-2.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Artist_1.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Artists_2.jpg" alt="" class="img-responsive"></div>
+                  </div>
+                  <div class="col-md-3 col-sm-4 col-xs-6">
+                      <div class="row"><img src="img/asli_India_4_WMedited.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/faith_disrupted.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/asli_India_WM.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Beach_Diaries.jpg" alt="" class="img-responsive"></div>
+                  </div>
+                  <div class="col-md-3 col-sm-4 col-xs-6">
+                      <div class="row"><img src="img/Brooklyn_Bridge.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/DSC_1556.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/DSC_1582.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/DSC_1596.jpg" alt="" class="img-responsive"></div>
+                  </div>
+                  <div class="col-md-3 col-sm-4 col-xs-6">
+                      <div class="row"><img src="img/DSC_1737.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Overload.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Reflections.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Shadow_of_the_Empire3.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Beach_Diaries.jpg" alt="" class="img-responsive"></div>
+                  </div>
+              </div>
+          </div>
+          <button type="button" class="btn btn-info btn-sm col-xs-offset-6"> Load More</button>
+      </div>
+      
       <hr class="featurette-divider">
       <div id="photographers" class="">
           <div class="container grid-custom">

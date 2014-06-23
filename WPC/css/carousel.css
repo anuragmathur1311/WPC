@@ -67,6 +67,13 @@ body {
 font-color:white;
 }
 
+@media only screen and (max-height: 768px) {
+.signup_buttons {
+  margin-bottom: 50px;
+  padding-top: 0px;
+}
+}
+
 /* Declare heights because of positioning of img element */
 @media only screen and (min-width: 768px) {
 .carousel .item {
@@ -314,4 +321,13 @@ fieldset#form_body {
 .navbar .navbar-nav > .disabled > a:focus {
   color: #444;
   background-color: transparent;
+}
+
+.dropdown-menu > li > a {
+  padding: 3px 20px;
+  font-weight: normal;
+  color: black;
+  white-space: nowrap;
+  text-align:left;
+  text-shadow: 0px;
 }

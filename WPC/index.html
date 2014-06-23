@@ -15,7 +15,7 @@
     <link href="css/cover.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet">
     <script type ="text/javascript" src="js/login.js"> </script>
   </head>
 <!-- NAVBAR
@@ -81,7 +81,7 @@
                                         <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
                                         <input type="password" name="pass" class="form-control" placeholder="Password" required>
                                         <label><input type="checkbox" value="remember-me"> Remember Me</label>
-                                        <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+                                        <button class="btn btn-lg btn-success btn-block" type="submit">Log In</button>
                                     </form>
                                 </div>
                               </li>
@@ -240,16 +240,35 @@
               </div>
           </div>
 
-        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p class="pull-right back-to-top"><a href="#">Back to top</a></p>
         <p>&copy; 2014 World Photographer's Club &middot; <a href="#">Privacy</a> &middot; <a href="#"> Terms </a>&middot; <a href="#"> Contact Us</a></p>
       </footer>
+      <script>
+          jQuery(document).ready(function() {
+              var offset = 220;
+              var duration = 1500;
+              jQuery(window).scroll(function() {
+              if (jQuery(this).scrollTop() > offset) {
+                  jQuery('.back-to-top').fadeIn(duration);
+              } else {
+                  jQuery('.back-to-top').fadeOut(duration);
+              }
+            });
+                                 
+            jQuery('.back-to-top').click(function(event) {
+                event.preventDefault();
+                jQuery('html, body').animate({scrollTop: 0}, duration);
+                return false;
+                })
+            });
+          </script>
     </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/docs.min.js"></script>
   </body>
