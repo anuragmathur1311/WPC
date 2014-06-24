@@ -110,90 +110,81 @@
               </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
       </nav>
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
 
-        <div class="carousel-inner">
-            <div class="item active">
-                <a  href="img/Brooklyn_Bridge.jpg" ><img src="img/Brooklyn_Bridge.jpg" alt="First slide"/></a>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <p>Photographers Name</p>
-                        <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-picture"></span> View Portfolio</button>
-                        <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Add to Ideabook</button>
-                        <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-pushpin"></span> Pin Photographer</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <a  href="img/DSC_1582.jpg" ><img src="img/DSC_1582.jpg" alt="First slide"/></a>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <p>Photographers Name</p>
-                        <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-picture"></span> View Portfolio</button>
-                        <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Add to Ideabook</button>
-                        <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-pushpin"></span> Pin Photographer</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <a  href="img/DSC_1737.jpg" ><img src="img/DSC_1737.jpg" alt="First slide"/></a>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <p>Photographers Name</p>
-                        <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-picture"></span> View Portfolio</button>
-                        <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Add to Ideabook</button>
-                        <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-pushpin"></span> Pin Photographer</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-
-    </div>
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-      <h3>Results</h3>
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-2 col-md-4 col-xs-6">
-          <a  href="#photos" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Photos" alt="Generic placeholder image"></a>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2 col-md-4 col-xs-6">
-          <a  href="#photographers" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Photographers" alt="Generic placeholder image"></a>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2 col-md-4 col-xs-6">
-          <a  href="#blog" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Blog" alt="Generic placeholder image"></a>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2 col-md-4 col-xs-6">
-            <a  href="#forum" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Forum" alt="Generic placeholder image"></a>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2 col-md-4 col-xs-6">
-            <a  href="#news" ><img class="img-circle" data-src="holder.js/140x140/sky/text:News" alt="Generic placeholder image"></a>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2 col-md-4 col-xs-6">
-            <a  href="#trends" ><img class="img-circle" data-src="holder.js/140x140/sky/text:Create Trends" alt="Generic placeholder image"></a>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
       
-      <hr class="featurette-divider">
+      <br><br><br><br>
       
       <div id="photos" class="portfolio main">
+        <nav class="navbar" role="navigation">
+          <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="my_photos.html" style="font-family:verdana;color:black;font-size:30px;"> My Photos</a>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search Photos <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <form class="navbar-form navbar-left" role="search" action="photos.html">
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Find Photos">
+                            </div>
+                          </form>                        
+                        </li>
+                      </ul>
+                   </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Filter<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Most Viewed</a></li>
+                        <li><a href="#">Most Liked</a></li>
+                        <li><a href="#">Most Commented</a></li>
+                        <li><a href="#">Most Shared</a></li>
+                        <li><a href="#">Most Pinned</a></li>
+                        <li><a href="#">Tags</a></li>
+                      </ul>
+                    </li>
+                  </ul>   
+                  <ul class="nav navbar-nav navbar-right" style="margin-right:20px;">                    
+                      <li>My Albums</li><br>
+                      <button type="submit" class="btn btn-warning btn-xs">New York</button>
+                      <button type="submit" class="btn btn-warning btn-xs">Brooklyn Bridge</button>
+                      <button type="submit" class="btn btn-warning btn-xs">Fashion</button>
+                      <button type="submit" class="btn btn-warning btn-xs">Delhi</button>
+                      <button type="submit" class="btn btn-warning btn-xs">India Gate</button>
+                      <button type="submit" class="btn btn-warning btn-xs">New York</button>
+                      <button type="submit" class="btn btn-warning btn-xs">Brooklyn Bridge</button>
+                      <button type="submit" class="btn btn-warning btn-xs">Fashion</button>
+                      <button type="submit" class="btn btn-warning btn-xs">Delhi</button>
+                      <button type="submit" class="btn btn-warning btn-xs">India Gate</button>             
+                  </ul>       
+                  <ul class="nav navbar-nav navbar-right"  style="margin-right:20px;">                    
+                      <li>My Tags</li><br>
+                      <button type="submit" class="btn btn-danger btn-xs">New York</button>
+                      <button type="submit" class="btn btn-danger btn-xs">Brooklyn Bridge</button>
+                      <button type="submit" class="btn btn-danger btn-xs">Fashion</button>
+                      <button type="submit" class="btn btn-danger btn-xs">Delhi</button>
+                      <button type="submit" class="btn btn-danger btn-xs">India Gate</button> 
+                       <button type="submit" class="btn btn-danger btn-xs">New York</button>
+                      <button type="submit" class="btn btn-danger btn-xs">Brooklyn Bridge</button>
+                      <button type="submit" class="btn btn-danger btn-xs">Fashion</button>
+                      <button type="submit" class="btn btn-danger btn-xs">Delhi</button>
+                      <button type="submit" class="btn btn-danger btn-xs">India Gate</button>                  
+                  </ul>
+              </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>   
           <div class="container grid-custom">
-              <h3>Photos</h3>
               <div class="container-fluid grid-custom">
                   <div class="col-md-3 col-sm-4 col-xs-6">
                       <div class="row"><img src="img/AnuragMathur-1.jpg" alt="" class="img-responsive"></div>
@@ -223,62 +214,12 @@
                   
               </div>
           </div>
-          <button type="button" class="btn btn-info btn-sm col-xs-offset-6"> Load More</button>
-      </div>
-      
-      <hr class="featurette-divider">
-      <div id="photographers" class="">
-          <div class="container grid-custom">
-              <h3>Photographers</h3>
-              <!-- Three columns of text below the carousel -->
-              <div class="row">
-                  <div class="col-lg-2">
-                      <img class="img-circle" data-src="holder.js/140x140/lava/text:Profile Photo" alt="Generic placeholder image">
-                          <h3></h3>
-                          <p></p>
-                          <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-picture"></span> View Portfolio</button>
-                          <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Add to Ideabook</button>
-                          <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-pushpin"></span> Pin Photographer</button>
-                  </div><!-- /.col-lg-4 -->
-              </div><!-- /.row -->
-          </div>
-          <button type="button" class="btn btn-info btn-sm col-xs-offset-6"> Load More</button>
-      </div>
-      
-      <hr class="featurette-divider">
-      <div id="blog" class="">
-          <div class="container grid-custom">
-              <h3>Blogs</h3>
-          </div>
-          <button type="button" class="btn btn-info btn-sm col-xs-offset-6"> Load More</button>
-      </div>
-      
-      <hr class="featurette-divider">
-      <div id="forum" class=" ">
-          <div class="container grid-custom">
-              <h3>Forum</h3>
-          </div>
-          <button type="button" class="btn btn-info btn-sm col-xs-offset-6"> Load More</button>
-      </div>
-      
-      <hr class="featurette-divider">
-      <div id="news" class=" ">
-          <div class="container grid-custom">
-              <h3>News</h3>
-          </div>
-          <button type="button" class="btn btn-info btn-sm col-xs-offset-6"> Load More</button>
-      </div>
-      
-      <hr class="featurette-divider">
-      <div id="trends" class=" ">
-          <div class="container grid-custom">
-              <h3>Create</h3>
+          <div class="text-center">
+            <button type="button" class="btn btn-info btn-sm"> Load More</button>
           </div>
       </div>
       
-      <hr class="featurette-divider">
-      <!-- FOOTER -->
-      <footer>
+      <footer style="padding:5px 5px;">
           <div class="row">
               <div class="col-md-6 col-md-offset-3 text-center">
                   <ul class="list-inline">
@@ -290,13 +231,13 @@
                       </li>
                       <li><a href="www.dribble.com"><i class="fa fa-pinterest fa-3x"></i></a>
                       </li>
-                  </ul>
+                    </ul>
               </div>
           </div>
-          
-          <p class="pull-right"><a href="#">Back to top</a></p>
-          <p class="center-block">&copy; 2014 World Photographer's Club &middot; <a href="#">Privacy</a> &middot; <a href="#"> Terms </a>&middot; <a href="#"> Contact Us</a></p>
-      </footer>
+
+        <p class="pull-right back-to-top"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 World Photographer's Club &middot; <a href="#">Privacy</a> &middot; <a href="#"> Terms </a>&middot; <a href="#"> Contact Us</a></p>
+      </footer>  
 
     </div><!-- /.container -->
 

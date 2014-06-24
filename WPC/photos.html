@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>World Photographer's Club</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/search_result.css" rel="stylesheet">
+    <link href="css/my_studio.css" rel="stylesheet">
+    <link href="css/font.min.css" rel="stylesheet">
+    <style>
+        .badge {
+            display: inline-block;
+            min-width: 10px;
+            padding: 3px 7px;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 1;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            background-color: #5cb85c;
+            border-radius: 10px;
+        }
+    </style>
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+      <nav class="navbar-default navbar-fixed-top" role="navigation">
+          <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="index.html" style="font-family:verdana;color:#ab1234;font-size:30px;"><em>wpc</em></a>
+              </div>
+              
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                      <li><a href="photos.html">Photos</a></li>
+                      <li><a href="blog.html">Blog</a></li>
+                      <li><a href="forum.html">Forum</a></li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#ab1234;font-size:18px;">EXPLORE <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#">WPC</a></li>
+                              <li><a href="#">Communities</a></li>
+                              <li><a href="#">People</a></li>
+                              <li class="divider"></li>
+                              <li><a href="#">Photos on a Map</a></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#">About Us</a></li>
+                              <li><a href="#">Contact</a></li>
+                              <li><a href="#">License and FAQ</a></li>
+                              <li class="divider"></li>
+                              <li class="disabled"><a href="#">Careers at WPC</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="https://www.facebook.com/pages/Anurag-Mathurs-Photography/215979155096125?ref=hl&ref_type=bookmark"><i class="fa fa-facebook fa-2x"></i></a></li>
+                      <li><a href="www.twitter.com"><i class="fa fa-twitter fa-2x"></i></a></li>
+                      <li><a href="www.dribble.com"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+                      <li><a href="www.dribble.com"><i class="fa fa-pinterest fa-2x"></i></a></li>
+                  </ul>
+                  <form class="navbar-form navbar-left" role="search" action="search_result.html">
+                      <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Find Photos, Communities & Photographers" size="42">
+                      </div>
+                      <button type="submit" class="btn btn-info">Search</button>
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                              <li>
+                                <div class="form_signin_container">
+                                    <form class="form-signin" role="form"  onsubmit="return validateForm() || validateLogin()" action="index_user.html" method="post" name="login_form">
+                                        <h2 class="form-signin-heading">Please sign in</h2>
+                                        <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+                                        <input type="password" name="pass" class="form-control" placeholder="Password" required>
+                                        <label><input type="checkbox" value="remember-me"> Remember Me</label>
+                                        <button class="btn btn-lg btn-success btn-block" type="submit">Log In</button>
+                                    </form>
+                                </div>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Forgot Password</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+
+      <br><br><br><br>
+      
+      <div id="photos" class="portfolio main">
+        <nav class="navbar" role="navigation">
+          <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <p class="navbar-brand" href=""> Showing Photos from all Users</p>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search Photos <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <form class="navbar-form navbar-left" role="search" action="photos.html">
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Find Photos">
+                            </div>
+                          </form>                        
+                        </li>
+                      </ul>
+                   </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Filter<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Trending</a></li>
+                        <li><a href="#">Most Viewed</a></li>
+                        <li><a href="#">Most Liked</a></li>
+                        <li><a href="#">Most Commented</a></li>
+                        <li><a href="#">Most Shared</a></li>
+                        <li><a href="#">Most Pinned</a></li>
+                        <li><a href="#">Around Me</a></li>
+                        <li><a href="#">Tags</a></li>
+                      </ul>
+                    </li>
+                  </ul>          
+                  <ul class="nav navbar-nav navbar-right">                    
+                      <li>Suggested Tags</li><br>
+                      <button type="submit" class="btn btn-warning btn-xs">New York</button>
+                      <button type="submit" class="btn btn-warning btn-xs">Brooklyn Bridge</button>
+                      <button type="submit" class="btn btn-warning btn-xs">Fashion</button>
+                      <button type="submit" class="btn btn-warning btn-xs">Delhi</button>
+                      <button type="submit" class="btn btn-warning btn-xs">India Gate</button>                        
+                  </ul>
+              </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+          <div class="container grid-custom">
+              <div class="container-fluid grid-custom">
+                  <div class="col-md-3 col-sm-4 col-xs-6">
+                      <div class="row"><img src="img/AnuragMathur-1.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/AnuragMathur-2.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Artist_1.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Artists_2.jpg" alt="" class="img-responsive"></div>
+                  </div>
+                  <div class="col-md-3 col-sm-4 col-xs-6">
+                      <div class="row"><img src="img/asli_India_4_WMedited.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/faith_disrupted.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/asli_India_WM.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Beach_Diaries.jpg" alt="" class="img-responsive"></div>
+                  </div>
+                  <div class="col-md-3 col-sm-4 col-xs-6">
+                      <div class="row"><img src="img/Brooklyn_Bridge.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/DSC_1556.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/DSC_1582.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/DSC_1596.jpg" alt="" class="img-responsive"></div>
+                  </div>
+                  <div class="col-md-3 col-sm-4 col-xs-6">
+                      <div class="row"><img src="img/DSC_1737.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Overload.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Reflections.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Shadow_of_the_Empire3.jpg" alt="" class="img-responsive"></div>
+                      <div class="row"><img src="img/Beach_Diaries.jpg" alt="" class="img-responsive"></div>
+                  </div>
+                  
+              </div>
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-info btn-sm disabled"> Load More</button>
+          </div>
+          <h3 class="text-center"><em>SignIn or SignUp to Load More</em></h3>
+        <div class="text-center">
+            <button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span><a href="signup.html" style="color:white;"> <em>Sign Up with email</em></a></button>
+            <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-facebook"></i></span><a href="signup.html" style="color:white;"> <em>Sign In with Facebook</em></a></button>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <footer style="padding:5px 5px;">
+          <div class="row">
+              <div class="col-md-6 col-md-offset-3 text-center">
+                  <ul class="list-inline">
+                      <li><a href="https://www.facebook.com/pages/Anurag-Mathurs-Photography/215979155096125?ref=hl&ref_type=bookmark"><i class="fa fa-facebook fa-3x"></i></a>
+                      </li>
+                      <li><a href="www.twitter.com"><i class="fa fa-twitter fa-3x"></i></a>
+                      </li>
+                      <li><a href="www.dribble.com"><i class="fa fa-google-plus-square fa-3x"></i></a>
+                      </li>
+                      <li><a href="www.dribble.com"><i class="fa fa-pinterest fa-3x"></i></a>
+                      </li>
+                    </ul>
+              </div>
+          </div>
+
+        <p class="pull-right back-to-top"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 World Photographer's Club &middot; <a href="#">Privacy</a> &middot; <a href="#"> Terms </a>&middot; <a href="#"> Contact Us</a></p>
+      </footer>    
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+  </body>
+</html>
