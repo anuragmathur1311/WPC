@@ -1,10 +1,10 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-
+html,
 body {
   padding-bottom: 40px;
-  color: #5a5a5a;
+  background-color: white;
 }
 
 
@@ -51,7 +51,7 @@ body {
   font-size: 60px;
   line-height: 1.4;
   text-shadow: 4px 4px #000000;
-  padding-bottom:0px;
+  padding-bottom:290px;
 }
 
 .signup_buttons {
@@ -71,6 +71,13 @@ font-color:white;
 .signup_buttons {
   margin-bottom: 50px;
   padding-top: 0px;
+}
+
+.carousel-caption h1 {
+  font-size: 60px;
+  line-height: 1.4;
+  text-shadow: 4px 4px #000000;
+  padding-bottom:90px;
 }
 }
 
@@ -105,9 +112,16 @@ font-color:white;
   margin-bottom: 20px;
   text-align: center;
 }
-.marketing h2 {
+h2 {
   font-weight: normal;
+  color:black;
 }
+
+p {
+  font-weight: normal;
+  color:black;
+}
+
 .marketing .col-lg-4 p {
   margin-right: 10px;
   margin-left: 10px;
@@ -330,4 +344,132 @@ fieldset#form_body {
   white-space: nowrap;
   text-align:left;
   text-shadow: 0px;
+}
+
+.navbar-default {
+  background-color: #dc0404;
+  border-color: #e7e7e7;
+}
+.navbar-default .navbar-brand {
+  color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.navbar-default .navbar-text {
+  color: #777;
+}
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: yellow;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: yellow;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .disabled > a,
+.navbar-default .navbar-nav > .disabled > a:hover,
+.navbar-default .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle {
+  border-color: yellow;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: yellow;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: yellow;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #e7e7e7;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: yellow;
+  background-color: transparent;
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: yellow;
+    background-color: transparent;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: yellow;
+    background-color: transparent;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.navbar-default .navbar-link {
+  color: yellow;
+}
+.navbar-default .navbar-link:hover {
+  color: yellow;
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container h1 {
+  color:black;
+}
+
+.panel-body {
+  
+}
+.panel .btn i,.btn span{
+ color:#000066;
+}
+.panel .panel-heading {
+ background-color:#ffffff;
+ font-weight:700;
+ font-size:16px;
+ color:#262626;
+ border-color:#ffffff;
+}
+.panel .panel-heading a {
+ font-weight:400;
+ font-size:11px;
+}
+.panel .panel-default {
+ border-color:#cccccc;
+}
+.panel .panel-thumbnail {
+ padding:0;
+}
+.panel .img-circle {
+ width:50px;
+ height:50px;
+}
+
+footer a {
+  color: black;
 }

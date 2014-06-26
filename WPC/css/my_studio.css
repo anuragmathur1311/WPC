@@ -18,6 +18,13 @@ body {
   font-size: 4.5em;
   font-weight: 700;
 }
+.vert-text h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+  color:gold;
+}
 
 /* Side Menu */
 
@@ -66,24 +73,157 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(../img/Shadow_of_the_Empire3.jpg) no-repeat center center fixed;
+  background: url(../img/img_7.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
+.transbox_left {
+    width: 400px;
+    height: 580px;
+    margin: 130px -410px;
+    background-color: transparent;
+    opacity: 1.0;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+    position: absolute;
+}
+
+.transbox_left h1{
+  text-align: right;
+  color: white;
+  font-family: arial;
+  font-size: 48px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.transbox_left h2{
+  text-align: right;
+  color: yellow;
+  font-family: arial;
+  font-style: italic;
+  padding: 0px;
+  margin: 0px;
+}
+
+.transbox_right {
+    width: 400px;
+    height: 580px;
+    margin: 130px 20px;
+    background-color: transparent;
+    opacity: 1.0;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+    position: absolute;
+}
+
+.transbox_right h1{
+  text-align: left;
+  color: white;
+  font-family: arial;
+  font-size: 48px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.transbox_right h2{
+  text-align: left;
+  color: yellow;
+  font-family: arial;
+  font-style: italic;
+  padding: 0px;
+  margin: 0px;
+}
+
+.transbox_right h3{
+  text-align: left;
+  color: white;
+  font-family: arial;
+  font-style: italic;
+  padding: 0px;
+  margin: 0px;
+}
+
+.transbox p {
+    margin: 30px 40px;
+    font-weight: bold;
+    color: #000000;
+}
 /* Intro */
 
+@media (max-width: 1435px) {
+  .transbox_left {
+    width: 400px;
+    height: 580px;
+    margin: 130px -410px;
+    background-color: transparent;
+    opacity: 1.0;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+    position: absolute;
+}
+
+.transbox_left h1{
+  text-align: right;
+  color: white;
+  font-family: arial;
+  font-size: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.transbox_left h2{
+  text-align: right;
+  color: yellow;
+  font-family: arial;
+  font-style: italic;
+  padding: 0px;
+  margin: 0px;
+}
+
+.transbox_right h1{
+  text-align: left;
+  color: white;
+  font-family: arial;
+  font-size: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.transbox_right h2{
+  text-align: left;
+  color: yellow;
+  font-family: arial;
+  font-style: italic;
+  padding: 0px;
+  margin: 0px;
+}
+
+.transbox_right h3{
+  text-align: left;
+  color: white;
+  font-family: arial;
+  font-style: italic;
+  padding: 0px;
+  margin: 0px;
+}
+
+.transbox p {
+    margin: 30px 40px;
+    font-weight: bold;
+    color: #000000;
+}
+}
 .intro {
   padding: 50px 0;
+  background: #ffff00;
 }
 
 /* Services */
 
 .services {
-  background: #7fbbda;
-  padding: 50px 0;
+  background: #000033;
+  padding: 10px 0;
   color: #ffffff;
 }
 
@@ -110,7 +250,7 @@ i.service-icon {
   display: table;
   height: 400px;
   width: 100%;
-  background: url(../img/into_the_storm.jpg) no-repeat center center fixed;
+  background: url(../img/img_7.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -145,14 +285,19 @@ my_photo_body{padding-top:50px}
 
 .call-to-action {
   color: #ffffff;
-  background: #0a5175;
-  padding: 50px 0;
+  background: white;
+  padding: 5px 0;
 }
 
 .call-to-action .btn {
-  margin: 10px;
+  margin: 5px 10px;
 }
 
+.call-to-action h3 {
+  color:black;
+  padding:0px;
+  margin: 0px;
+}
 /* Map */
 
 .map {
@@ -183,10 +328,10 @@ i.scroll:hover {
 }
 /* Responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
 	
   .header {
-	background: url(../img/Shadow_of_the_Empire3.jpg) no-repeat center center scroll; 
+	background: url(../img/Artists_2.jpg) no-repeat center center scroll; 
   }
 
   .callout {
@@ -196,7 +341,7 @@ i.scroll:hover {
   .map {
 	height: 75%;
   }
-
+   
 }
 
 .main {
@@ -219,3 +364,88 @@ i.scroll:hover {
   margin-right: 2px;
   margin-left: 2px;
 }
+
+.navbar-default {
+  background-color: #dc0404;
+  border-color: #e7e7e7;
+}
+.navbar-default .navbar-brand {
+  color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.navbar-default .navbar-text {
+  color: #777;
+}
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: yellow;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: yellow;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .disabled > a,
+.navbar-default .navbar-nav > .disabled > a:hover,
+.navbar-default .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle {
+  border-color: yellow;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: yellow;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: yellow;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #e7e7e7;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: yellow;
+  background-color: transparent;
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: yellow;
+    background-color: transparent;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: yellow;
+    background-color: transparent;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.navbar-default .navbar-link {
+  color: yellow;
+}
+.navbar-default .navbar-link:hover {
+  color: yellow;
+}
+/* This button was generated using CSSButtonGenerator.com */
