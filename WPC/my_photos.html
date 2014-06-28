@@ -11,13 +11,13 @@
     <title>World Photographer's Club</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
-    <link href="css/search_result.css" rel="stylesheet">
     <link href="css/my_studio.css" rel="stylesheet">
     <link href="css/font.min.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
     <style>
         .badge {
             display: inline-block;
@@ -176,39 +176,89 @@
       </nav>   
           <div class="container grid-custom">
               <div class="container-fluid grid-custom">
-                  <div class="col-md-3 col-sm-4 col-xs-6">
-                      <div class="row"><img src="img/AnuragMathur-1.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/AnuragMathur-2.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/Artist_1.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/Artists_2.jpg" alt="" class="img-responsive"></div>
-                  </div>
-                  <div class="col-md-3 col-sm-4 col-xs-6">
-                      <div class="row"><img src="img/asli_India_4_WMedited.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/faith_disrupted.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/asli_India_WM.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/Beach_Diaries.jpg" alt="" class="img-responsive"></div>
-                  </div>
-                  <div class="col-md-3 col-sm-4 col-xs-6">
-                      <div class="row"><img src="img/Brooklyn_Bridge.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/DSC_1556.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/DSC_1582.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/DSC_1596.jpg" alt="" class="img-responsive"></div>
-                  </div>
-                  <div class="col-md-3 col-sm-4 col-xs-6">
-                      <div class="row"><img src="img/DSC_1737.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/Overload.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/Reflections.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/Shadow_of_the_Empire3.jpg" alt="" class="img-responsive"></div>
-                      <div class="row"><img src="img/Beach_Diaries.jpg" alt="" class="img-responsive"></div>
-                  </div>
+            <div class="col-md-3">
+                <div class="row"><img src="img/img_1.jpg" alt="" class="img-responsive" data-toggle="modal" data-target=".bs-example-modal-lg"></div>
+                <div class="row"><img src="img/img_2.jpg" alt="" class="img-responsive" data-toggle="modal" data-target="#myModal"></div>
+                <div class="row"><img src="img/img_3.jpg" alt="" class="img-responsive" data-toggle="modal" data-target="#myModal"></div>
+                <div class="row"><img src="img/img_4.jpg" alt="" class="img-responsive" data-toggle="modal" data-target="#myModal"></div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="row"><img src="img/img_5.jpg" alt="" class="img-responsive"></div>
+                <div class="row"><img src="img/img_6.jpg" alt="" class="img-responsive"></div>
+                <div class="row"><img src="img/img_7.jpg" alt="" class="img-responsive"></div>
+                <div class="row"><img src="img/img_8.jpg" alt="" class="img-responsive"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="row"><img src="img/img_1.jpg" alt="" class="img-responsive"></div>
+                <div class="row"><img src="img/img_2.jpg" alt="" class="img-responsive"></div>
+                <div class="row"><img src="img/img_3.jpg" alt="" class="img-responsive"></div>
+                <div class="row"><img src="img/img_4.jpg" alt="" class="img-responsive"></div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="row"><img src="img/img_5.jpg" alt="" class="img-responsive"></div>
+                <div class="row"><img src="img/img_6.jpg" alt="" class="img-responsive"></div>
+                <div class="row"><img src="img/img_7.jpg" alt="" class="img-responsive"></div>
+                <div class="row"><img src="img/img_8.jpg" alt="" class="img-responsive"></div>
+            </div>
                   
               </div>
           </div>
           <div class="text-center">
-            <button type="button" class="btn btn-info btn-sm"> Load More</button>
+            <button type="button" class="btn btn-info btn-sm" style="margin-top:20px;"> Load More</button>
           </div>
       </div>
-      
+
+       <!--  Modal content for the above example -->
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img class="displayed" src="img/AnuragMathur-2.jpg" alt="First slide"/>
+                      <div class="container">
+                        <div class="carousel-caption">
+                          <p><a href="my_studio.html">Photographers Name</a></p>
+                              <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-picture"></span></button>
+                              <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+                              <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                              <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-pushpin"></span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img class="displayed" src="img/DSC_1582.jpg" alt="Second slide"/>
+                      <div class="container">
+                        <div class="carousel-caption">
+                            <p><a href="my_studio.html">Photographers Name</a></p>
+                              <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-picture"></span></button>
+                              <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+                              <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                              <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-pushpin"></span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img class="displayed" src="img/DSC_1737.jpg" alt= "Third slide"/>
+                      <div class="container">
+                        <div class="carousel-caption">
+                            <p><a href="my_studio.html">Photographers Name</a></p>
+                              <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-picture"></span></button>
+                              <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+                              <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                              <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-pushpin"></span></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+                <!-- /.carousel -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
       <footer style="padding:5px 5px;">
           <div class="row">
               <div class="col-md-6 col-md-offset-3 text-center">
