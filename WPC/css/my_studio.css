@@ -449,3 +449,9 @@ i.scroll:hover {
   color: yellow;
 }
 /* This button was generated using CSSButtonGenerator.com */
+
+.image_slideshow {
+  height:100%;
+  margin-left: auto;
+  margin-right: auto;
+}

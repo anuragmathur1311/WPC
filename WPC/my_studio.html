@@ -16,7 +16,20 @@
     
     <link href="css/my_studio.css" rel="stylesheet">
     <link href="css/font.css" rel="stylesheet">
-
+    <script type="text/javascript">
+        function changeImage(a) {
+             document.getElementById("imageSlide").src=a;
+        }
+    </script>
+    <style>
+    .thumb_imgs {
+        height:100px;
+        border: 3px solid #000;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    </style>
 </head>
 
 <body>
@@ -264,24 +277,14 @@
               </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
       </nav>
-        <div class="container-fluid grid-custom">
-            <div class="col-md-3">
-                <div class="row"><img src="img/img_1.jpg" alt="" class="img-responsive"></div>
-                <div class="row"><img src="img/img_2.jpg" alt="" class="img-responsive"></div>
-                <div class="row"><img src="img/img_3.jpg" alt="" class="img-responsive"></div>
-                <div class="row"><img src="img/img_4.jpg" alt="" class="img-responsive"></div>
-            </div>
-            
-            <div class="col-md-3">
-                <div class="row"><img src="img/img_5.jpg" alt="" class="img-responsive"></div>
-                <div class="row"><img src="img/img_6.jpg" alt="" class="img-responsive"></div>
-                <div class="row"><img src="img/img_7.jpg" alt="" class="img-responsive"></div>
-                <div class="row"><img src="img/img_8.jpg" alt="" class="img-responsive"></div>
-            </div>
+      <div id="thumb_img" class="thumb_imgs">
+            <!--<img id="thumbnail_view" alt="" src="" height="100px" />-->
+            <!--<img id="thumbnail_view" src='img/AnuragMathur_m.jpg'  height="100px" onclick='changeImage("img/AnuragMathur-2.jpg");'>-->
+      </div>
+      <br>      
+        <div class="main_img">
+            <img id="imageSlide" alt="" src="img/Artist_1.jpg" height="600px"/>
         </div>
-          <div class="text-center">
-            <button type="button" class="btn btn-info btn-sm"> Load More</button>
-          </div>
     </div>
     <!-- /Portfolio -->
     <br>
@@ -368,6 +371,105 @@
         });
     });
     </script>
+    <script type='text/javascript' src='http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js'></script>
+    <script>
+    function thumbnail(e){
+    return document.getElementById(e);
+    }
+        var imgs = [
+        'img/AnuragMathur-2.jpg',
+        'img/faith_disrupted.jpg',
+        'img/Artist_1.jpg',
+        'img/AnuragMathur-2.jpg',
+        'img/faith_disrupted.jpg',
+        'img/Artist_1.jpg',
+        'img/AnuragMathur-2.jpg',
+        'img/faith_disrupted.jpg',
+        'img/Artist_1.jpg',
+        'img/AnuragMathur-2.jpg',
+        'img/faith_disrupted.jpg',
+        'img/Artist_1.jpg',
+        'img/AnuragMathur-2.jpg',
+        'img/faith_disrupted.jpg',
+        'img/Artist_1.jpg',
+        'img/AnuragMathur-2.jpg',
+        'img/faith_disrupted.jpg',
+        'img/Artist_1.jpg',
+        'img/AnuragMathur-2.jpg',
+        'img/faith_disrupted.jpg',
+        'img/Artist_1.jpg'
+        ];
+        var alt = ['1','2','3','1','2','3','1','2','3','1','2','3','1','2','3','1','2','3','1','2','3'];
+        var output = '';
+        for(var i in imgs){
+          output += "<img src='"+imgs[i]+"' alt='"+alt[i]+"' height='100px' onclick='changeImage('"+imgs[i]+"');'/>";
+        }
+    thumbnail('thumb_img').innerHTML = output;
+    </script>
+
+    <!-- onclick='changeImage('"+imgs[i]+"'); 
+    <script type="text/javascript">
+        function changeImage(a) {
+            document.getElementById("img").src=a;
+        }
+    </script>
+    <div id="main_img">
+        <img id="img" src="http://placehold.it/110x110">
+    </div>
+    <div id="thumb_img">
+        <img src='http://placehold.it/120x60'  onclick='changeImage("http://placehold.it/120x60");'>
+        <img src='http://placehold.it/130x60'  onclick='changeImage("http://placehold.it/130x60");'>
+        <img src='http://placehold.it/140x60'  onclick='changeImage("http://placehold.it/140x60");'>
+    </div>
+
+    function E(e){
+      return document.getElementById(e);
+    }
+    var imgs = ['img1.jpg', 'img2.png', 'img3.jpg', 'img4.jpg', 'img5.png', 'img6.jpg', 'img7.jpg', 'img8.png', 'img9.jpg', 'img10.jpg', 'img11.png', 'img12.jpg', 'img13.jpg', 'img14.png', 'img15.jpg', 'img16.jpg', 'img17.png', 'img18.jpg', 'img19.jpg', 'img20.png'];
+    var alt = [/*alternative info here like imgs*/];
+    var ttl = [/*titles here like imgs*/];
+    var output = '';
+    for(var i in imgs){
+      output += "<img src='"+imgs[i]+"' alt='"+alt[i]+"' title='"+ttl[i]+"' />";
+    }
+    E('idWhereYouWantImgs').innerHTML = output;
+
+    <script type="text/javascript">
+        var imgs = [
+        'img/AnuragMathur-2.jpg',
+        'img/faith_disrupted.jpg',
+        'img/Artist_1.jpg'];
+        var cnt = imgs.length; 
+
+        $(function() {
+            setInterval(Slider, 3000);
+        });
+
+        function Slider() {
+        $('#imageSlide').fadeOut("slow", function() {
+           $(this).attr('src', imgs[(imgs.length++) % cnt]).fadeIn("slow");
+        });
+        }
+    </script>
+
+    <script type="text/javascript">
+        var imgs = [
+        'img/AnuragMathur-2.jpg',
+        'img/faith_disrupted.jpg',
+        'img/Artist_1.jpg'];
+        var cnt = imgs.length;
+        $(this).attr('src', imgs[0]);
+
+        function image_load() {
+         for (i = 1; i <= cnt; i++) { 
+            $(this).attr('src', imgs[i]);
+        }
+        };
+    </script>
+-->
+}
+
+
     <script src="js/docs.min.js"></script>
 </body>
 
